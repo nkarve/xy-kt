@@ -15,3 +15,5 @@
 ```
 
 <img src="/demos/rt.gif">
+
+When the temperature is raised above 1 J/kB the *unbinding transition* occurs and vortex-antivortex pairs proliferate the system.
