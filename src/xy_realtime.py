@@ -8,15 +8,15 @@ plt.style.use('ggplot')
 plt.rcParams['axes.grid'] = False
 plt.rcParams['image.cmap'] = 'hsv'
 
-temp = 1
-L = 50
-grid = 2 * np.pi * np.random.rand(L, L).astype(np.float32)
-x = y = np.arange(L)
+temp = 1 # System temperature
+L = 50 # Lattice size
+grid = 2 * np.pi * np.random.rand(L, L).astype(np.float32) # Lattice of spins
+x = y = np.arange(L) 
 fig, ax = plt.subplots()
 
 ax.set_facecolor('w')
-img = ax.quiver(x, y, np.cos(grid), np.sin(grid), angles='xy', scale_units='xy', scale=0.4, pivot='mid')
-back = ax.matshow(vorticity(grid), cmap='Purples_r')
+img = ax.quiver(x, y, np.cos(grid), np.sin(grid), angles='xy', scale_units='xy', scale=0.4, pivot='mid') # quiver plot of site spins
+back = ax.matshow(vorticity(grid), cmap='Purples_r') # vorticity grid
 
 plt.subplots_adjust(bottom=0.2)
 plt.xlim(0, L)
